@@ -7,8 +7,6 @@
   --extra: #E0DFFD;
   --action: #FFC212;
   --afeto: #F9B0C3;
-  --titulo: 'Poppins', sans-serif;
-  --texto: 'Open Sans', sans-serif;
 }
 
 .darkmode {
@@ -22,7 +20,7 @@
   --afeto: #FF85A2;
 }
 
-/* RESET E ESTILOS BASE */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +32,7 @@ html {
   font-size: 16px;
   height: 100%;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--base-color);
@@ -41,25 +40,24 @@ body {
   line-height: 1.6;
 }
 
-/* LAYOUT PRINCIPAL */
-.container {
+/* Cabeçalho */
+.cabecalho {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* HEADER */
 header {
-  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding: 20px 5%;
+  position: sticky;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: var(--accent);
   text-decoration: none;
   display: flex;
@@ -72,7 +70,7 @@ header {
 
 /* BOTÕES */
 .btn-navbar {
-  display: inline-block;
+  display: inline;
   padding: 12px 24px;
   text-decoration: none;
   font-weight: 600;
@@ -86,23 +84,22 @@ header {
   border-bottom: 3px var(--action) solid;
 }
 
-.login-navbar {
+.login-btn {
   color: var(--base-color);
   background-color: var(--accent);
   height: 20px;
   width: 70px;
   padding: 10px 50px;
-  border-radius: 50px;
+  border-radius: 65px;
   text-decoration: none;
-  font-weight: 600;
-  text-align: center;
+  font-weight: bold;
 }
 
-.login-navbar:hover {
+.login-btn:hover {
   cursor: pointer;
   background-color: var(--base-color);
   color: var(--text-color);
-  border: 20px 70px var(--accent) solid;
+  border: 2px solid var(--accent);
   border-radius: 50px;
 }
 
@@ -122,15 +119,16 @@ header {
 }
 
 /* */
-.container1 {
+.hero {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: left;
   text-align: left;
   padding: 80px 0;
 }
 
-.container1 h1 {
+.hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   color: var(--text-color);
@@ -228,7 +226,7 @@ header {
 } */
 
 /*  */
-.servicos {
+.beneficios {
   padding: 100px;
   background-color: var(--base-color);
   width: 100%;
@@ -242,13 +240,13 @@ header {
   font-size: 2.2rem;
 }
 
-.servicos-grid {
+.card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.servico-card {
+.card {
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   padding: 25px;
@@ -256,12 +254,12 @@ header {
   transition: var(--transition);
 }
 
-.servico-icon {
+.bene-icon {
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
-.servico-card h3 {
+.card h3 {
   margin-bottom: 15px;
   color: var(--primary);
 }
