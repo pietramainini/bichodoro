@@ -3,18 +3,23 @@
   --base-color: #ffffff;
   --base-var: #FFF6ED;
   --text-color: #46467A;
-  --text-var: black;
-  --accent: #FEDA86;
-  --extra: #F9B0C3;
-  --transition: -2px;
+  --accent: #7768C6;
+  --extra: #E0DFFD;
+  --action: #FFC212;
+  --afeto: #F9B0C3;
+  --titulo: 'Poppins', sans-serif;
+  --texto: 'Open Sans', sans-serif;
 }
 
 .darkmode {
-  --base-color: #222236;
+  --base-color: #1C1B29;
   --base-var: #46467A;
-  --text-color: #ffffff;
+  --text-color: #F5F5F5;
+  --text-var: #C5C6D0;
   --accent: #FFC212;
-  --extra: #F9B0C3;
+  --extra: #2A273F;
+  --action: #FFC212;
+  --afeto: #FF85A2;
 }
 
 /* RESET E ESTILOS BASE */
@@ -30,8 +35,8 @@ html {
   height: 100%;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--base-var);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--base-color);
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -55,14 +60,14 @@ header {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--extra);
+  color: var(--accent);
   text-decoration: none;
   display: flex;
   align-items: center;
 }
 
 .logo span {
-  color: var(--accent);
+  color: var(--afeto);
 }
 
 /* BOTÕES */
@@ -78,13 +83,11 @@ header {
 }
 
 .btn-navbar:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-2px);
+  border-bottom: 3px var(--action) solid;
 }
 
 .login-navbar {
-  cursor: pointer;
-  color: var(--text-color);
+  color: var(--base-color);
   background-color: var(--accent);
   height: 20px;
   width: 70px;
@@ -96,7 +99,11 @@ header {
 }
 
 .login-navbar:hover {
-  transform: translateY(-2px);
+  cursor: pointer;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  border: 20px 70px var(--accent) solid;
+  border-radius: 50px;
 }
 
 .comecar-btn {
@@ -127,7 +134,6 @@ header {
   font-size: 3rem;
   margin-bottom: 20px;
   color: var(--text-color);
-  -webkit-text-fill-color: transparent;
 }
 
 .container1 p {
