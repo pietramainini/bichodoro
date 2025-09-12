@@ -62,6 +62,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: var(--text-color);
 }
 
 .header-content {
