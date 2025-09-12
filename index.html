@@ -3,89 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bichodoro</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Bichodoro - Estude com Técnica e Bem-estar</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="cabecalho">
-    <header>
-      <div class="logo">Bicho<span>doro</span><img src="" alt=""></div>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">Bicho<span>doro</span> 🐣</a>
       <nav>
-        <li class="btn-navbar"><a href="">Ínicio</a></li>
-        <li class="btn-navbar"><a href="">Sobre Nós</a></li>
-        <li class="btn-navbar"><a href="">Funcionalidades</a></li>
-        <li class="btn-navbar"><a href="">Comunidade</a></li>
-        <li class="btn-navbar"><a href="">Contato</a></li>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="#comunidade">Comunidade</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
       </nav>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-login">Acessar</a>
+        <a href="register.html" class="btn btn-register">Cadastrar</a>
+      </div>
+    </div>
+  </header>
 
-      <a href="" class="login-btn">Entrar</a>
-    </header>
-
-    <main>
-      <section class="hero">
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container" style="display: flex; align-items: center; gap: 2rem;">
         <div class="hero-text">
-          <h1>
-            Estude, Cuide-se e Se Divirta
-          </h1>
-          <p>
-            Transforme sua rotina de estudos em algo mais leve e divertido, cuidado de você enquanto aprende.
-          </p>
+          <h1>Estude, Cuide-se e Se Divirta</h1>
+          <p>Transforme sua rotina de estudos em algo mais leve e divertido, cuidando de você enquanto aprende. A técnica Pomodoro reinventada com gamificação e bem-estar.</p>
+          <a href="register.html" class="btn btn-register">Começar Agora</a>
         </div>
         <div class="hero-image">
-        <img src="img/mascote.png" alt="Mascote Bichodoro">
-      </div>
-      </section>
-      
-      <section class="beneficios">
-        <h1></h1>
-        <div class="card-container">
-          <div class="card">Organização</div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
+          <div style="font-size: 8rem; color: var(--accent);">🐣</div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <section id="funcionalidades">
+      <div class="container">
+        <h2 class="titulo">Como Funciona?</h2>
+        <div class="card-container">
+          <div class="card">
+            <div class="bene-icon">⏱️</div>
+            <h3>Técnica Pomodoro</h3>
+            <p>Estude com ciclos de 25 minutos focados seguidos por pausas revigorantes para maximizar sua produtividade.</p>
+          </div>
+          <div class="card">
+            <div class="bene-icon">💪</div>
+            <h3>Exercícios de Alongamento</h3>
+            <p>Durante as pausas, receba sugestões de exercícios simples para cuidar do seu corpo e evitar dores.</p>
+          </div>
+          <div class="card">
+            <div class="bene-icon">🎮</div>
+            <h3>Sistema de Gamificação</h3>
+            <p>Desbloqueie conquistas, suba de nível e compete com amigos enquanto mantém consistência nos estudos.</p>
+          </div>
+          <div class="card">
+            <div class="bene-icon">📊</div>
+            <h3>Relatórios de Progresso</h3>
+            <p>Acompanhe sua evolução com estatísticas detalhadas sobre seu tempo de estudo e conquistas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="beneficios">
-      <h1 class="titulo">Como Funciona?</h1>
-      <div class="card">
-        <div class="bene-icon">📅</div>
-        <h3>Organização</h3>
-        <p>Estude com ciclos bem definidos</p>
-      </div>
-      <div class="card">
-        <h3>Autocuidado</h3>
-        <p></p>
-      </div>
-      <div class="card">
-        <h3>Produtividade</h3>
-        <p></p>
-      </div>
-    </section>
-
-    <section class="conquistas">
-      <h2 class="titulo">Conquistas Populares</h2>
-      <div class="badges-container">
-        <div class="badge">🏆</div>
-        <div class="badge">⭐</div>
-        <div class="badge">🚀</div>
-        <div class="badge locked">🔒</div>
-        <div class="badge locked">🔒</div>
+      <div class="container">
+        <h2 class="titulo">Benefícios</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Maior Produtividade</h3>
+            <p>A técnica Pomodoro comprovadamente aumenta o foco e a retenção de conteúdo.</p>
+          </div>
+          <div class="card">
+            <h3>Saúde em Dia</h3>
+            <p>Os exercícios regulares previnem dores nas costas, LER e outras condições relacionadas ao estudo prolongado.</p>
+          </div>
+          <div class="card">
+            <h3>Motivação Constante</h3>
+            <p>O sistema de gamificação mantém você engajado e motivado para continuar estudando.</p>
+          </div>
+        </div>
       </div>
     </section>
-  </div>
 
-  <button id="theme-switch" class="theme-switch" aria-label="Alternar modo escuro">🌓</button>
+    <section id="comunidade">
+      <div class="container">
+        <h2 class="titulo">Conquistas Populares</h2>
+        <div class="badges-container">
+          <div class="badge" title="Maratona de Estudos - 10h de estudo">🏆</div>
+          <div class="badge" title="Consistência Semanal - 7 dias seguidos">⭐</div>
+          <div class="badge" title="Foco Total - 10 Pomodoros sem distração">🚀</div>
+          <div class="badge locked" title="Desbloqueie após 30 dias">🔒</div>
+          <div class="badge locked" title="Desbloqueie após 50h de estudo">🔒</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Rodapé -->
   <footer>
-    <div class="footer-content">
-      <p>© 2025 Bichodoro | Feito com ❤︎ pela equipe da ETEC</p>
+    <div class="container">
+      <p>© 2025 Bichodoro | Feito com ❤️ pela equipe da ETEC</p>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <button id="theme-switch" class="theme-switch" aria-label="Alternar modo escuro">🌓</button>
+
+  <script>
+    // Alternador de tema claro/escuro
+    const themeSwitch = document.getElementById('theme-switch');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Verificar preferência do sistema
+    if (prefersDarkScheme.matches) {
+      document.body.classList.add('darkmode');
+      themeSwitch.textContent = '🌞';
+    }
+    
+    themeSwitch.addEventListener('click', () => {
+      document.body.classList.toggle('darkmode');
+      themeSwitch.textContent = document.body.classList.contains('darkmode') ? '🌞' : '🌓';
+      
+      // Salvar preferência no localStorage
+      localStorage.setItem('theme', document.body.classList.contains('darkmode') ? 'dark' : 'light');
+    });
+    
+    // Verificar tema salvo
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('darkmode');
+      themeSwitch.textContent = '🌞';
+    } else if (savedTheme === 'light') {
+      document.body.classList.remove('darkmode');
+      themeSwitch.textContent = '🌓';
+    }
+
+    // Navegação suave
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
