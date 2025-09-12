@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bichodoro - Estude com Técnica e Bem-estar</title>
+  <title>Bichodoro</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
   <header>
+    <div class="container">
+      <div class="left-section">
+        <a href="index.html" class="logo">Bicho<span>doro</span> 🐣</a>
+        <nav>
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#funcionalidades">Funcionalidades</a>
+          <a href="#comunidade">Comunidade</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </div>
     <div class="container header-content">
-      <a href="index.html" class="logo">Bicho<span>doro</span> 🐣</a>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#funcionalidades">Funcionalidades</a></li>
-          <li><a href="#comunidade">Comunidade</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+      
+      <div class="header-right">
+        <div class="avatar" title="User Avatar"></div>
+        <button class="btn btn-start">Começar a Estudar</button>
+      </div>
       <div class="header-actions">
         <a href="login.html" class="btn btn-login">Acessar</a>
         <a href="register.html" class="btn btn-register">Cadastrar</a>
@@ -31,7 +40,8 @@
       <div class="container" style="display: flex; align-items: center; gap: 2rem;">
         <div class="hero-text">
           <h1>Estude, Cuide-se e Se Divirta</h1>
-          <p>Transforme sua rotina de estudos em algo mais leve e divertido, cuidando de você enquanto aprende. A técnica Pomodoro reinventada com gamificação e bem-estar.</p>
+          <p>Transforme sua rotina de estudos em algo mais leve e divertido, cuidando de você enquanto aprende. A
+            técnica Pomodoro reinventada com gamificação e bem-estar.</p>
           <a href="register.html" class="btn btn-register">Começar Agora</a>
         </div>
         <div class="hero-image">
@@ -47,7 +57,8 @@
           <div class="card">
             <div class="bene-icon">⏱️</div>
             <h3>Técnica Pomodoro</h3>
-            <p>Estude com ciclos de 25 minutos focados seguidos por pausas revigorantes para maximizar sua produtividade.</p>
+            <p>Estude com ciclos de 25 minutos focados seguidos por pausas revigorantes para maximizar sua
+              produtividade.</p>
           </div>
           <div class="card">
             <div class="bene-icon">💪</div>
@@ -78,7 +89,8 @@
           </div>
           <div class="card">
             <h3>Saúde em Dia</h3>
-            <p>Os exercícios regulares previnem dores nas costas, LER e outras condições relacionadas ao estudo prolongado.</p>
+            <p>Os exercícios regulares previnem dores nas costas, LER e outras condições relacionadas ao estudo
+              prolongado.</p>
           </div>
           <div class="card">
             <h3>Motivação Constante</h3>
@@ -104,31 +116,29 @@
 
   <footer>
     <div class="container">
-      <p>© 2025 Bichodoro | Feito com ❤️ pela equipe da ETEC</p>
+      <p>© 2025 Bichodoro | Feito com ❤︎ pela equipe da ETEC</p>
     </div>
   </footer>
-
-  <button id="theme-switch" class="theme-switch" aria-label="Alternar modo escuro">🌓</button>
 
   <script>
     // Alternador de tema claro/escuro
     const themeSwitch = document.getElementById('theme-switch');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
+
     // Verificar preferência do sistema
     if (prefersDarkScheme.matches) {
       document.body.classList.add('darkmode');
       themeSwitch.textContent = '🌞';
     }
-    
+
     themeSwitch.addEventListener('click', () => {
       document.body.classList.toggle('darkmode');
-      themeSwitch.textContent = document.body.classList.contains('darkmode') ? '🌞' : '🌓';
-      
+      themeSwitch.textContent = document.body.classList.contains('darkmode') ? '🌞' : '🌙';
+
       // Salvar preferência no localStorage
       localStorage.setItem('theme', document.body.classList.contains('darkmode') ? 'dark' : 'light');
     });
-    
+
     // Verificar tema salvo
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -136,12 +146,12 @@
       themeSwitch.textContent = '🌞';
     } else if (savedTheme === 'light') {
       document.body.classList.remove('darkmode');
-      themeSwitch.textContent = '🌓';
+      themeSwitch.textContent = '🌙';
     }
 
     // Navegação suave
     document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
@@ -153,4 +163,5 @@
     });
   </script>
 </body>
+
 </html>

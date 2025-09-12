@@ -1,25 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
 /* Variáveis de cores */
 :root {
   --base-color: #ffffff;
-  --base-var: #FFF6ED;
-  --text-color: #46467A;
-  --text-var: #46467A;
-  --accent: #7768C6;
-  --extra: #E0DFFD;
-  --action: #FFC212;
+  --base-var: #fff6ed;
+  --text-color: #0b0b0b;
+  --text-var: #818181;
+  --accent: #fed988;
   --afeto: #F9B0C3;
-  --titulo: 'Abril Fatface', serif;
-  --corpo: 'Montserrat', sans-serif;
+  --extra: #0b0b0b;
 }
 
 .darkmode {
-  --base-color: #1C1B29;
-  --base-var: #46467A;
-  --text-color: #F5F5F5;
-  --text-var: #C5C6D0;
-  --accent: #FFC212;
-  --extra: #2A273F;
-  --action: #FFC212;
+  --base-color: #1a1a1a;
+  --base-var: #2c2c2c;
+  --text-color: #020202;
+  --text-var: #a0a0a0;
+  --action: #ffaf00;
   --afeto: #FF85A2;
 }
 
@@ -28,7 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 body {
@@ -52,12 +49,19 @@ body {
 /* Cabeçalho */
 header {
   background-color: var(--base-color);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 1rem 0;
   transition: all 0.3s ease;
+}
+
+.left-section {
+  flex: 2;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-content {
@@ -89,7 +93,7 @@ nav ul {
 nav a {
   text-decoration: none;
   color: var(--text-color);
-  font-weight: 500;
+  font-weight: bold;
   transition: all 0.3s ease;
   padding: 0.5rem 0;
   position: relative;
@@ -105,7 +109,7 @@ nav a::after {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: var(--accent);
   transition: all 0.3s ease;
 }
@@ -122,36 +126,70 @@ nav a:hover::after {
 
 .btn {
   padding: 0.5rem 1.2rem;
-  border-radius: 4px;
-  font-weight: 500;
+  border-radius: 50px;
+  font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
+  color: var(--text-color);
   display: inline-block;
   cursor: pointer;
-}
-
-.btn-register:hover {
-  color: var(--accent);
-  background-color: transparent;
+  align-items: center;
 }
 
 .btn-login {
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  width: 50%;
+  background-color: var(--accent);
+  border: 3px solid var(--accent);
 }
 
 .btn-login:hover {
-  background-color: var(--accent);
-  color: white;
+  background-color: transparent;
+  border: 3px solid var(--accent);
+  color: var(--accent);
 }
 
 .btn-register {
+  width: 50%;
   background-color: var(--accent);
-  color: white;
+  border: 3px solid var(--accent);
 }
 
 .btn-register:hover {
-  background-color: #6557b0;
+  background-color: transparent;
+  color: var(--accent);
+  border: 3px solid var(--accent);
+}
+
+.btn-start {
+  background: var(--text-color);
+  padding: 10px 22px;
+  color: var(--base-color);
+  font-weight: 600;
+  border-radius: 20px;
+  border: 3px solid var(--text-color);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-start:hover {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 3px solid var(--text-color);
+}
+
+/* Pequeno Avatar */
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: url(https://i.pinimg.com/736x/c4/72/fa/c472fa8bb84f1598a90d63ba669c3e9e.jpg) no-repeat center/cover;
+  margin-left: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 /* Hero Section */
@@ -161,7 +199,7 @@ nav a:hover::after {
   align-items: center;
   gap: 2rem;
   min-height: 80vh;
-  background: linear-gradient(135deg, var(--base-var) 0%, var(--extra) 100%);
+  background: var(--base-var);
 }
 
 .hero-text {
@@ -281,8 +319,7 @@ section {
 
 /* Rodapé */
 footer {
-  background-color: var(--text-color);
-  color: var(--base-color);
+  color: var(--text-color);
   padding: 2rem 0;
   text-align: center;
   margin-top: 4rem;
