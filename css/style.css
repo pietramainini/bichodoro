@@ -14,9 +14,8 @@
 .darkmode {
   --base-color: #1a1a1a;
   --base-var: #2c2c2c;
-  --text-color: #020202;
+  --text-color: #e0e0e0;
   --text-var: #a0a0a0;
-  --action: #ffaf00;
   --afeto: #FF85A2;
 }
 
@@ -26,34 +25,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lexend Deca', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--base-color);
   color: var(--text-color);
+  display: flex;
+  justify-content: center;
   line-height: 1.6;
   transition: all 0.3s ease;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
 }
 
 /* Layout */
 .container {
-  width: 100%;
-  max-width: 1200px;
+  background: var(--base-color);
+  border-radius: 15px;
+  max-width: 1600px;
+  width: 95%;
+  display: flex;
+  padding: 60px 50px;
   margin: 0 auto;
-  padding: 0 15px;
-}
-
-/* Cabeçalho */
-header {
-  background-color: var(--base-color);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 1rem 0;
-  transition: all 0.3s ease;
 }
 
 .left-section {
@@ -62,23 +56,31 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 0 20px;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 22px;
   color: var(--text-color);
-  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  text-decoration: none;
+  letter-spacing: 1.2px;
 }
 
 .logo span {
@@ -88,119 +90,96 @@ header {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 nav a {
-  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
   color: var(--text-color);
-  font-weight: bold;
-  transition: all 0.3s ease;
-  padding: 0.5rem 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 5px;
   position: relative;
+  left: 20%;
 }
 
-nav a:hover {
+nav a:hover, 
+nav a.active {
   color: var(--accent);
 }
 
 nav a::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0;
   height: 3px;
   background-color: var(--accent);
-  transition: all 0.3s ease;
+  transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
   width: 100%;
 }
 
-.header-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
 .btn {
-  padding: 0.5rem 1.2rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 50px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
   color: var(--text-color);
-  display: inline-block;
-  cursor: pointer;
+  display: inline-flex;
   align-items: center;
-}
-
-.btn-login {
-  width: 50%;
-  background-color: var(--accent);
-  border: 3px solid var(--accent);
-}
-
-.btn-login:hover {
-  background-color: transparent;
-  border: 3px solid var(--accent);
-  color: var(--accent);
-}
-
-.btn-register {
-  width: 50%;
-  background-color: var(--accent);
-  border: 3px solid var(--accent);
-}
-
-.btn-register:hover {
-  background-color: transparent;
-  color: var(--accent);
-  border: 3px solid var(--accent);
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 16px;
 }
 
 .btn-start {
   background: var(--text-color);
-  padding: 10px 22px;
   color: var(--base-color);
-  font-weight: 600;
-  border-radius: 20px;
   border: 3px solid var(--text-color);
-  cursor: pointer;
-  font-size: 14px;
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 36px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  width: fit-content;
 }
 
 .btn-start:hover {
   background-color: transparent;
   color: var(--text-color);
-  border: 3px solid var(--text-color);
+  border-color: var(--text-color);
+  box-shadow: none;
 }
 
 /* Pequeno Avatar */
-
 .avatar {
-  width: 36px;
-  height: 36px;
+  width: 30%;
+  height: 70%;
   border-radius: 50%;
   background: url(https://i.pinimg.com/736x/c4/72/fa/c472fa8bb84f1598a90d63ba669c3e9e.jpg) no-repeat center/cover;
-  margin-left: 12px;
 }
 
 .header-right {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 /* Hero Section */
 .hero {
-  padding: 4rem 0;
+  margin-left: 40px;
+  padding: 40px 0;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   min-height: 80vh;
-  background: var(--base-var);
+  border-radius: 15px;
 }
 
 .hero-text {
@@ -208,16 +187,18 @@ nav a:hover::after {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
   color: var(--text-color);
   line-height: 1.2;
+  font-weight: 900;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
   color: var(--text-var);
+  max-width: 480px;
 }
 
 .hero-image {
@@ -227,103 +208,119 @@ nav a:hover::after {
   align-items: center;
 }
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.hero-image div {
+  font-size: 10rem;
+  color: var(--accent);
 }
 
-/* Seções */
+.funcionalidades {
+  background-color: var(--base-var);
+  border-radius: -15px;
+}
+
+/* Sections */
 section {
   padding: 4rem 0;
 }
 
 .titulo {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 3rem;
   color: var(--text-color);
+  font-weight: 700;
 }
 
 /* Benefícios */
 .beneficios {
   background-color: var(--base-var);
-  border-radius: 10px;
-  padding: 3rem;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
   margin-top: 2rem;
 }
 
 .card {
   background-color: var(--base-color);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: center;
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .bene-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .card h3 {
   color: var(--text-color);
   margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .card p {
   color: var(--text-var);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Conquistas */
 .badges-container {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.8rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .badge {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background-color: var(--base-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 2.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .badge:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .badge.locked {
   opacity: 0.5;
   filter: grayscale(1);
+  cursor: not-allowed;
 }
 
 /* Rodapé */
 footer {
+  justify-content: center;
   color: var(--text-color);
   padding: 2rem 0;
   text-align: center;
   margin-top: 4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* Botão de tema */
@@ -349,15 +346,31 @@ footer {
 }
 
 /* Responsividade */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-  .header-content {
+  header {
     flex-direction: column;
-    gap: 1rem;
+    align-items: flex-start;
+    padding: 20px;
   }
 
   nav ul {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 0;
   }
 
   .hero {
@@ -371,5 +384,20 @@ footer {
 
   .card-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-start {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
   }
 }

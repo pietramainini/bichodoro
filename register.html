@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrar - Bichodoro</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="left-section">
+        <a href="index.html" class="logo">Bicho<span>doro</span> 🐣</a>
+        <nav>
+          <a href="index.html">Início</a>
+          <a href="register.html" class="active">Registrar</a>
+          <a href="login.html">Login</a>
+          <a href="forum.html">Fórum</a>
+          <a href="contact.html">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="register-section">
+      <div class="container">
+        <h1>Registrar Conta</h1>
+        <form id="register-form">
+          <label for="username">Nome de Usuário</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit" class="btn btn-start">Registrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Bichodoro | Feito com ❤︎ pela equipe da ETEC</p>
+    </div>
+  </footer>
+
+  <script>
+    // Placeholder for form submission logic
+    document.getElementById('register-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Registro enviado! (Funcionalidade a ser implementada)');
+    });
+  </script>
+</body>
+
+</html>
