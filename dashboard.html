@@ -5,35 +5,108 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bichodoro - Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css" integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/dashboard.css">
   <script type="text/javascript" src="./js/dashboard.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <aside class="sidebar">
-        <div class="sidebar-header">
-          <a href="#" class="logo">Bicho<span>doro</span></a>
-        </div>
-        <nav class="sidebar-nav">
-          <ul>
-            <li><a href="#" class="active"><i class="inicio"></i> Ínicio</a></li>
-            <li><a href="#"><i class="forum"></i> Fórum</a></li>
-            <li><a href="#"><i class="professores"></i> Professores</a></li>
-            <li><a href="#"><i class="estudos"></i> Estudos</a></li>
-            <li><a href="#"><i class="calendario"></i> Cronograma</a></li>
-            <li><a href="#"><i class="conquistas"></i> Conquistas</a></li>
-            <li><a href="#"><i class="biblioteca"></i> Biblioteca</a></li>
-            <li><a href="#"><i class="notas"></i> Notas</a></li>
-          </ul>
-        </nav>
-        <div class="sidebar-footer">
-          <a href="index.html" class="btn btn-secondary btn-block"><i class="fas fa-sign-out-alt"></i> Sair</a>
-        </div>
-      </aside>
+  <nav id="sidebar">
+    <div id="sidebar_content">
+      <div id="user">
+        <div id="user_avatar" alt="Avatar"></div>
+        
+        <p id="user_infos">
+          <span class="item-description">
+            Usuário
+          </span>
+          <span class="item-description">
+            Descrição do usuário
+          </span>
+        </p>
+      </div>
+
+      <ul id="side_items">
+        <li class="side-item active">
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+            <span class="item-description">
+              Ínicio
+            </span>
+          </a>
+        </li>
+
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-comments"></i>
+            <span class="item-description">
+              Fórum
+            </span>
+          </a>
+        </li>
+
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-book"></i>
+            <span class="item-description">
+              Estudos
+            </span>
+          </a>
+        </li>
+
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-clock"></i>
+            <span class="item-description">
+              Cronograma
+            </span>
+          </a>
+        </li>
+
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-trophy"></i>
+            <span class="item-description">
+              Conquistas
+            </span>
+          </a>
+        </li>
+
+        <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span class="item-description">
+              Biblioteca
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <li class="side-item">
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <span class="item-description">
+              Configuraçoes
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <button id="open_btn">
+        <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
-  </header>
+
+    <div id="logout">
+      <button id="logout_btn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="item-description">
+          Logout
+        </span>
+      </button>
+    </div>
+  </nav>
+
   <main class="main-content">
     <header class="topbar">
       <div class="search-container">
