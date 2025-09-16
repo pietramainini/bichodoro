@@ -1,32 +1,23 @@
-// Alternador de tema claro/escuro
-const themeSwitch = document.getElementById('theme-switch');
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+let darkmode = localStorage.getItem('darkmode')
+const themeSwitch = document.getElementById('theme-switch')
 
-// Verificar preferência do sistema
-if (prefersDarkScheme.matches) {
-    document.body.classList.add('darkmode');
-    themeSwitch.textContent = '🌞';
+const enableDarkmode = () => {
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
 }
 
-themeSwitch.addEventListener('click', () => {
-    document.body.classList.toggle('darkmode');
-    themeSwitch.textContent = document.body.classList.contains('darkmode') ? '🌞' : '🌙';
-
-    // Salvar preferência no localStorage
-    localStorage.setItem('theme', document.body.classList.contains('darkmode') ? 'dark' : 'light');
-});
-
-// Verificar tema salvo
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    document.body.classList.add('darkmode');
-    themeSwitch.textContent = '🌞';
-} else if (savedTheme === 'light') {
-    document.body.classList.remove('darkmode');
-    themeSwitch.textContent = '🌙';
+const disableDarkmode = () => {
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
 }
 
-// Navegação suave
+if (darkmode === "active") enableDarkmode()
+
+themeSwitch.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
+
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -38,3 +29,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+function emBreve() {
+    alert("Disponível em breve!");
+}

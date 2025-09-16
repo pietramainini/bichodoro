@@ -2,21 +2,22 @@
 
 /* Variáveis de cores */
 :root {
-  --base-color: #ffffff;
-  --base-var: #fff6ed;
-  --text-color: #0b0b0b;
+  --base-color: #fff6ed;
+  --base-var: #ffffff;
+  --text-color: #1F1F1F;
   --text-var: #818181;
-  --accent: #fed988;
+  --accent: #fedb7f;
   --afeto: #F9B0C3;
   --extra: #0b0b0b;
 }
 
 .darkmode {
-  --base-color: #1a1a1a;
-  --base-var: #2c2c2c;
-  --text-color: #e0e0e0;
-  --text-var: #a0a0a0;
-  --afeto: #FF85A2;
+  --base-color: #282A36;
+  --base-var: #44475A;
+  --text-color: #F8F8F2;
+  --text-var: #e0e0e0;
+  --accent: #eb94ab;
+  --afeto: #fed988;
 }
 
 /* Reset e estilos base */
@@ -41,7 +42,6 @@ body {
 
 /* Layout */
 .container {
-  background: var(--base-color);
   border-radius: 15px;
   max-width: 1600px;
   width: 95%;
@@ -125,27 +125,36 @@ nav a.active::after {
   width: 100%;
 }
 
+button{
+  border: none;
+  padding: .8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .btn {
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
-  color: var(--text-color);
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   border: 2px solid transparent;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn-start {
   background: var(--text-color);
   color: var(--base-color);
   border: 3px solid var(--text-color);
-  padding: 14px 32px;
   font-weight: 700;
-  border-radius: 36px;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   width: fit-content;
 }
@@ -154,6 +163,22 @@ nav a.active::after {
   background-color: transparent;
   color: var(--text-color);
   border-color: var(--text-color);
+  box-shadow: none;
+}
+.btn-register {
+  background: var(--accent);
+  color: var(--text-color);
+  border: 3px solid var(--accent);
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  width: fit-content;
+  padding: 20px 30px;
+}
+
+.btn-register:hover {
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
   box-shadow: none;
 }
 
@@ -187,7 +212,7 @@ nav a.active::after {
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: 50px;
   margin-bottom: 1.5rem;
   color: var(--text-color);
   line-height: 1.2;
@@ -215,7 +240,8 @@ nav a.active::after {
 
 .funcionalidades {
   background-color: var(--base-var);
-  border-radius: -15px;
+  border: var(--base-var);
+  border-radius: 30px;
 }
 
 /* Sections */
@@ -249,7 +275,7 @@ section {
 .card {
   background-color: var(--base-color);
   padding: 2.5rem 2rem;
-  border-radius: 12px;
+  border-radius: 24px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: center;
   transition: all 0.3s ease;
@@ -279,39 +305,6 @@ section {
   line-height: 1.5;
 }
 
-/* Conquistas */
-.badges-container {
-  display: flex;
-  justify-content: center;
-  gap: 1.8rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.badge {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: var(--base-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.badge:hover {
-  transform: scale(1.15);
-}
-
-.badge.locked {
-  opacity: 0.5;
-  filter: grayscale(1);
-  cursor: not-allowed;
-}
-
 /* Rodapé */
 footer {
   justify-content: center;
@@ -324,25 +317,37 @@ footer {
 }
 
 /* Botão de tema */
-.theme-switch {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent);
-  color: white;
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 999;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
-.theme-switch:hover {
-  transform: rotate(30deg);
+#theme-switch svg{
+  fill: var(--base-var);
+  width: 30px;
+  height: 30px;
+}
+
+#theme-switch svg:last-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
 
 /* Responsividade */
