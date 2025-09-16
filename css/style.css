@@ -125,11 +125,10 @@ nav a.active::after {
   width: 100%;
 }
 
-button{
+button {
   border: none;
   padding: .8em 2em;
-  background-color: var(--primary-color);
-  color: white;
+  color: var(--base-color);
   border-radius: 4px;
   font: inherit;
   font-weight: 500;
@@ -143,7 +142,6 @@ button{
   text-decoration: none;
   transition: all 0.3s ease;
   color: var(--accent);
-  display: inline-flex;
   align-items: center;
   cursor: pointer;
   border: 2px solid transparent;
@@ -185,7 +183,7 @@ button{
 /* Pequeno Avatar */
 .avatar {
   width: 30%;
-  height: 70%;
+  height: 64%;
   border-radius: 50%;
   background: url(https://i.pinimg.com/736x/c4/72/fa/c472fa8bb84f1598a90d63ba669c3e9e.jpg) no-repeat center/cover;
 }

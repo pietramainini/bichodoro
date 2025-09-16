@@ -43,6 +43,16 @@ main {
     padding-left: calc(82px + 20px);
 }
 
+button {
+    border: none;
+    padding: .8em 2em;
+    color: var(--base-color);
+    border-radius: 4px;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 #sidebar {
     display: flex;
     flex-direction: column;
@@ -115,7 +125,7 @@ main {
 }
 
 .side-item.active a {
-    color: var(--accent);
+    color: var(--text-color);
 }
 
 .side-item a i {
