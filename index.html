@@ -1,89 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bichodoro</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css">
-  <script type="text/javascript" src="./js/script.js" defer></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bichodoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src="./js/script.js" defer></script>
 </head>
-
 <body>
-  <header>
+<header>
     <div class="container">
-      <div class="left-section">
-        <a href="index.html" class="logo">Bicho<span>doro</span> <i class="fa-solid fa-paw"></i></a>
-        <nav>
-          <a href="./index.html">Início</a>
-          <a href="#" onclick="emBreve()">Sobre Nós</a>
-          <a href="#" onclick="emBreve()">Serviços</a>
-          <a href="#" onclick="emBreve()">Fórum</a>
-          <a href="#" onclick="emBreve()">Contato</a>
-        </nav>
-      </div>
-      <div class="header-right">
-        <div class="avatar" title="User Avatar"></div>
-        <a href="dashboard.html" class="btn btn-start">Começar a Estudar</a>
-      </div>
-    </div>
-    
-  </header>
+        <div class="nav-top">
+            <div class="logo">
+                <a href="index.html" class="logo">Bicho<span>doro</span> <i class="fa-solid fa-paw"></i></a>
+            </div>
 
-  <main>
+            <!-- NAV: agora com id para o toggle -->
+            <nav id="primary-nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#inicio" class="active">Início</a></li>
+                    <li><a href="#" onclick="emBreve()">Sobre Nós</a></li>
+                    <li><a href="#" onclick="emBreve()">Serviços</a></li>
+                    <li><a href="#" onclick="emBreve()">Fórum</a></li>
+                    <li><a href="#" onclick="emBreve()">Contato</a></li>
+                    <!-- CTA visível no menu mobile -->
+                    <li class="mobile-only">
+                        <a href="dashboard.html" class="btn btn-start">Começar a Estudar</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <div class="avatar" title="User Avatar" aria-hidden="true"></div>
+                <a href="dashboard.html" class="btn btn-start">Começar a Estudar</a>
+            </div>
+
+            <!-- Botão hambúrguer (mostra no mobile) -->
+            <button id="nav-toggle"
+                    class="nav-toggle"
+                    aria-label="Abrir menu"
+                    aria-controls="primary-nav"
+                    aria-expanded="false">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Backdrop para fechar o menu no mobile -->
+<div id="nav-backdrop" class="nav-backdrop" hidden></div>
+
+<main>
     <section id="inicio" class="hero">
         <div class="hero-text">
-          <h1 class="main-title">Estude, Cuide-se e Se Divirta</h1>
-          <p>Transforme sua rotina de estudos em algo mais leve e divertido, cuidando de você enquanto aprende.</p>
-          <a href="dashboard.html" class="btn btn-register">Começar Agora <i class="fa-solid fa-angles-right"></i></a>
+            <h1 class="main-title">Estude, Cuide-se e Se Divirta</h1>
+            <p>Transforme sua rotina de estudos em algo mais leve e divertido, cuidando de você enquanto aprende.</p>
+            <a href="dashboard.html" class="btn btn-register">Começar Agora <i class="fa-solid fa-angles-right"></i></a>
         </div>
         <div class="hero-image">
-          <div style="font-size: 8rem; color: var(--accent);">🐣</div>
+            <div style="font-size: 8rem; color: var(--accent);">🐣</div>
         </div>
-      </div>
     </section>
 
     <section class="funcionalidades">
-      <div class="container">
-        <h2 class="titulo">Como Funciona?</h2>
-        <div class="card-container">
-          <div class="card">
-            <div class="bene-icon">⏱️</div>
-            <h3>Técnica Pomodoro</h3>
-            <p>Estude com ciclos de 25 minutos focados seguidos por pausas revigorantes para maximizar sua
-              produtividade.</p>
-          </div>
-          <div class="card">
-            <div class="bene-icon">💪</div>
-            <h3>Exercícios de Alongamento</h3>
-            <p>Durante as pausas, receba sugestões de exercícios simples para cuidar do seu corpo e evitar dores.</p>
-          </div>
-          <div class="card">
-            <div class="bene-icon">🎮</div>
-            <h3>Sistema de Gamificação</h3>
-            <p>Desbloqueie conquistas, suba de nível e compete com amigos enquanto mantém consistência nos estudos.</p>
-          </div>
-          <div class="card">
-            <div class="bene-icon">📊</div>
-            <h3>Relatórios de Progresso</h3>
-            <p>Acompanhe sua evolução com estatísticas detalhadas sobre seu tempo de estudo e conquistas.</p>
-          </div>
+        <div class="container">
+            <h2 class="titulo">Como Funciona?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="bene-icon">⏱️</div>
+                    <h3>Técnica Pomodoro</h3>
+                    <p>Estude com ciclos de 25 minutos focados seguidos por pausas revigorantes para maximizar sua
+                        produtividade.</p>
+                </div>
+                <div class="card">
+                    <div class="bene-icon">💪</div>
+                    <h3>Exercícios de Alongamento</h3>
+                    <p>Durante as pausas, receba sugestões de exercícios simples para cuidar do seu corpo e evitar
+                        dores.</p>
+                </div>
+                <div class="card">
+                    <div class="bene-icon">🎮</div>
+                    <h3>Sistema de Gamificação</h3>
+                    <p>Desbloqueie conquistas, suba de nível e compete com amigos enquanto mantém consistência nos
+                        estudos.</p>
+                </div>
+                <div class="card">
+                    <div class="bene-icon">📊</div>
+                    <h3>Relatórios de Progresso</h3>
+                    <p>Acompanhe sua evolução com estatísticas detalhadas sobre seu tempo de estudo e conquistas.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
+</main>
 
-  <button id="theme-switch">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd" /></svg>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" /></svg>
-  </button>
+<!-- Botão flutuante: bottom-right -->
+<button id="theme-switch" aria-label="Alternar tema" aria-pressed="false">
+    <!-- lua (dark) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor"
+              d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"/>
+    </svg>
+    <!-- sol (light) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor"
+              d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 12 2.25Z"/>
+    </svg>
+</button>
 
-  <footer>
+<footer>
     <div>
-      <p>© 2025 Bichodoro | Feito com ❤︎ pela equipe da ETEC</p>
+        <p>© 2025 Bichodoro | Feito com ❤︎ pela equipe da ETEC</p>
     </div>
-  </footer>
-</body>
+</footer>
 
+<script>
+    // fallback
+    window.emBreve = window.emBreve || function () {
+        alert("Disponível em breve!");
+    };
+</script>
+</body>
 </html>

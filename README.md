@@ -3,10 +3,7 @@
 ### Hackteen - Projeto Empresa Venturus Campinas-SP
 ### Etec Rodrigues de Abreu - 1º DS-AMS
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
 ## ✶ Autores
-
 - [Pietra Mainini](https://www.github.com/ninidev0) (Desenvolvedora, Criadora e Co-Designer)
 - [Marianne Tella](https://www.github.com/mariannetp) (Ilustradora e Idealizadora)
 - [Yasmin Zulian](https://www.github.com/yasminzulian84-hub) (Tester e Co-Designer)
@@ -33,7 +30,7 @@ A proposta é simples e prática: ajudar estudantes e professores em organizar s
 **Front-end:** HTML5, CSS3 e JavaScript
 
 ## ✶ Apresentação
-![Apresentação](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Apresentação](img\Apresentação.mp4)
 
 ## ✶ Melhorias Desejadas
 - [ ] Melhoria nas telas de *sign-up* e *login*
