@@ -1,4 +1,3 @@
-
 # 🐾 Bichodoro
 ### Hackteen - Projeto Empresa Venturus Campinas-SP
 ### Etec Rodrigues de Abreu - 1º DS-AMS
@@ -30,7 +29,7 @@ A proposta é simples e prática: ajudar estudantes e professores em organizar s
 **Front-end:** HTML5, CSS3 e JavaScript
 
 ## ✶ Apresentação
-[Apresentação](https://files.catbox.moe/5q348v.mp4)
+[Apresentação](https://files.catbox.moe/eaiqqm.mp4)
 
 ## ✶ Melhorias Desejadas
 - [ ] Melhoria nas telas de *sign-up* e *login*
